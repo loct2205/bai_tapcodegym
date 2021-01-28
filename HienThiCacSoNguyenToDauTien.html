@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+            let number=Number(prompt("So luong so nguyen to can in ra: "));
+            let count=0;
+            let N=2;
+            let i=2;
+            while(count<=number)
+            {
+                let kiem_tra=true;
+                for( i=2; i<=Math.sqrt(N); i++) 
+                {
+                    if (N%i==0) 
+                    {
+                        kiem_tra=false;
+                        break;
+                    } 
+                } 
+                if (kiem_tra===true) 
+                {
+                    count++;
+                    document.writeln(N);
+                }
+                N++;   
+            }
+           
+        </script>
+    </body>
+</html>
