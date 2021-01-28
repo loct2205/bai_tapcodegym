@@ -1,0 +1,43 @@
+<html>
+    <head></head>
+    <body>
+        Cân nặng của bạn là:
+        <input id="can"/><br/>
+        Chiều cao của bạn là:
+        <input id="cao"/><br/>
+        <button onclick="tinh()">Tính</button><br/><br/>
+        <span>KET QUA LA: </span><span id="ket_qua"></span>
+    </body>
+    <script>
+        /*BMI <16: Gầy độ III
+        16 ≤ BMI < 17: Gầy độ II
+        17 ≤ BMI < 18.5: Gầy độ I
+        18.5 ≤ BMI < 25: Bình thường
+        25 ≤ BMI < 30: Thừa cân
+        30 ≤ BMI < 35: Béo phì độ 1
+        35 ≤ BMI < 40: Béo phì độ II
+        BMI > 40: Béo phì độ III*/
+        function tinh() {
+            let can = Number(document.getElementById("can").value);
+            let cao = Number(document.getElementById("cao").value);
+            let ket_qua = document.getElementById("ket_qua");
+            let bmi;
+            bmi= (can/(cao*cao));
+            if (bmi < 16) {ket_qua.innerHTML=" gầy độ III"}
+            else
+            if (bmi<17) {ket_qua.innerHTML= "gầy độ II"}
+            else
+            if (bmi<18.5) {ket_qua.innerHTML="gầy độ I"}
+            else
+            if (bmi<25) {ket_qua.innerHTML="binh thuong"}
+            else
+            if (bmi<30) {ket_qua.innerHTML="thừa cân"}
+            else
+            if (bmi<35) {ket_qua.innerHTML="béo phì I"}
+            else
+            if (bmi<40) {ket_qua.innerHTML="báo phì II"}
+            else
+            if (bmi>40) {ket_qua.innerHTML="béo phì III"};
+        }
+    </script>
+</html>

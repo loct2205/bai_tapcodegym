@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    NHẬP THÁNG
+    <input style="color: aqua; " id="thang"> <br/>
+    <button onclick="tinh()">LOAD</button><br/>
+    <span>SỐ NGÀY LÀ: </span><span id="ket_qua"></span>
+</body>
+<script>
+    function tinh() {
+        let thang= document.getElementById("thang").value;
+        //let ketqua=document.getElementById("ket_qua");
+        switch (thang) {
+            case "1":
+            case "3":
+            case "5":
+            case "7":
+            case "8":
+            case "10":
+            case "12":
+                console.log(document.getElementById("ket_qua").innerHTML);
+                document.getElementById("ket_qua").innerHTML="31 ngày";
+                //ketqua.innerHTML="31 ngày";
+                break;
+            case "2":
+            console.log(document.getElementById("ket_qua").innerHTML); 
+                document.getElementById("ket_qua").innerHTML="28 hoặc 29 ngày";
+                //ketqua.innerHTML="28 hoặc 29 ngày";
+                break;
+            case "4":
+            case "6":
+            case "9":
+            case "11":
+            console.log(document.getElementById("ket_qua").innerHTML);
+                document.getElementById("ket_qua").innerHTML="30 ngày";
+                //ketqua.innerHTML="30 ngày";
+                break;
+        default : document.getElementById("ket_qua").innerHTML="NaNaNa";
+                //ketqua.innerHTML="NaNaNa";
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        NHẬP SỐ: 
+        <input type="number" name="" id="so">
+        <button onclick="kiem_tra()">KIỂM TRA</button> <br/>
+        <span>KẾT QUẢ: </span><span id="ket_qua"></span>
+    </body>
+    <script>
+        function kiem_tra() {
+            let sochan=Number(document.getElementById("so").value);
+            if (sochan % 2 ==0 && sochan!=0) {
+                document.getElementById("ket_qua").innerHTML="Số chắn đấy";
+            } else document.getElementById("ket_qua").innerHTML="Không phải số chẵn";
+        }
+    </script>
+</html>

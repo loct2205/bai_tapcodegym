@@ -1,0 +1,28 @@
+<html>
+    <head></head>
+    <body>
+        Số km đã đi:
+        <input id="sokm" type="text" />
+        <br/>
+        Số năm đã mua:
+        <input id="sonam" type="text"/>
+        <br/>
+        <button onclick="kt()">Kiểm tra bảo hành</button>
+        <br/>
+
+        Kết quả: <span id="kq" style="color:rgb(94, 255, 0);"></span>
+    </body>
+    <script>
+        function kt() {
+            let sok= Number(document.getElementById("sokm").value);
+            let son= Number(document.getElementById("sonam").value);
+
+            if (sok > 3000 || son>3) {
+                document.getElementById("kq").innerHTML="Hết bảo hành mất rồi";
+                document.getElementById("kq").style="color:rgb(255, 0, 0)"
+            } else {
+                document.getElementById("kq").innerHTML="Bảo hành thôi";
+            }
+        }
+    </script>
+</html>

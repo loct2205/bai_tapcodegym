@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TÍNH NĂM NHUẬN</title>
+</head>
+<body>
+    <input id="nam"/>
+    <button onclick="xac_dinh()">XÁC ĐỊNH NĂM NHUẬN</button>
+    <br/>
+    <span id="ket_qua">KẾT QUẢ</span>
+</body>
+<script>
+    function xac_dinh(){
+        let nam = Number(document.getElementById("nam").value);
+        let ket_qua = document.getElementById("ket_qua");
+
+        if (nam % 4 ===0) {
+            if (nam % 100 !== 0) {
+                ket_qua.innerHTML = "đây là năm nhuận";
+            } else {
+                if (nam % 400 ===0) {
+                    ket_qua.innerHTML = "đây là năm nhuận";
+                } else {
+                    ket_qua.innerHTML= "đây không phải là năm nhuận";
+                }
+            }
+        } else {
+        ket_qua.innerHTML = "đây không phải là năm nhuận";
+        }
+
+    }
+</script>
+</html>

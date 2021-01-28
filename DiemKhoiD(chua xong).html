@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>TÍNH ĐIỂM ĐẠI HỌC KHỐI D</h1><br/>
+        Môn Toán<input id="toan"><br/>
+        Môn Văn<input id="van"><br/>
+        Môn Anh<input id="anh"><br>
+        Khu vực
+        <select  id="kv">
+            <option >KV1</option>
+            <option >KV2</option>
+            <option>KV2-NT</option>
+            <option>KV3</option>
+        </select>
+        <button onclick="tinh()">Tính điểm</button>
+        <span id="kq" style="color: brown;"></span>
+        <script>
+            function tinh() {
+                let toan=Number(document.getElementById("toan").value);
+                let van=Number(document.getElementById("van").value);
+                let anh=Number(document.getElementById("anh").value);
+                let tong=toan+van+anh;
+                console.log(tong);
+                let kv=document.getElementById("kv").value;
+                switch (kv) {
+                    case "KV1": tong+=0.75; break;
+                    case "KV2-NT":tong+=0.5;break;
+                    case "KV2":tong+=0.25;break;
+                }
+                document.getElementById("kq").innerHTML="Tổng điểm đại học khối D của bạn là: "+tong;
+            }
+        </script>
+    </body>
+</html>

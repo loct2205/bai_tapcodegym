@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="cau_hoi">What does HTML stand for?</p>
+    <input type="radio" name="tra_loi" id="a"/> <span id="dap_an1" > Tool Markup Language</span><br>
+    <input type="radio" name="tra_loi" id="b"/><span id="dap_an2" >Hyper Text Marku Language</span><br>
+    <input type="radio" name="tra_loi" id="c"/><span id="dap_an3" >Hyperlinks and Text Markup Language</span><br>
+    <input type="radio" name="tra_loi"  id="d"/><span id="dap_an4" ></span><br>
+
+    <button onclick="next()">NEXT</button><br/>
+    <span>Ket qua: </span><span id="ket_qua"></span>
+</body>
+<script>
+    let cauhoi=document.getElementById("cau_hoi");
+    let da1=document.getElementById("dap_an1");
+    let da2=document.getElementById("dap_an2");
+    let da3=document.getElementById("dap_an3");
+    let da4=document.getElementById("dap_an4");
+    let cauhoiht=1;
+    let diem=0;
+    function next() {
+        let a=document.getElementById("a");
+        let b=document.getElementById("b");
+        let c=document.getElementById("c");
+        let d=document.getElementById("d");
+        switch (cauhoiht) {    
+            case 1:
+                cauhoi.innerHTML="What is making the Web standards?";
+                da1.innerHTML="Google";
+                da2.innerHTML="Mozilla";
+                da3.innerHTML="The World Wide Web Consortium";
+                da4.innerHTML="Microsoft";
+                if (a.checked) {
+                    diem++;
+                }
+                a.checked=b.checked=c.checked=d.checked=false;
+                cauhoiht ++;
+                
+                break;
+            case 2:
+                cauhoi.innerHTML="Choose the correct HTML element for the largest heading:?";
+                da1.innerHTML="<heading>";
+                da2.innerHTML="<head&lt;";
+                da3.innerHTML="<h1>";
+                da4.innerHTML="<h6>"; 
+                cauhoiht ++;  
+                if (a.checked) {
+                    diem++;
+                }
+                a.checked=b.checked=c.checked=d.checked=false;
+                break;
+            case 3:
+                cauhoi.innerHTML="What is the correct HTML element for inserting a line break?";
+                da1.innerHTML="/<lb>";
+                da2.innerHTML="/<br>";
+                da3.innerHTML="/<break>";
+                cauhoiht ++;
+                if (a.checked) {
+                    diem++;
+                }
+                a.checked=b.checked=c.checked=d.checked=false;
+                break;
+            case 4:
+                cauhoi.innerHTML="What is the correct HTML for adding a background color?";
+                da1.innerHTML="<body style=\""; 
+                da2.innerHTML="<body bg=\"\"";
+                da3.innerHTML="<background>yellow<background>";
+                cauhoiht ++;
+                if (a.checked) {
+                    diem++;
+                }
+                a.checked=b.checked=c.checked=d.checked=false;
+                break;
+            case 5:
+                cauhoi.innerHTML="Choose the correct HTML element to define important text";
+                da1.innerHTML="<i>";
+                da2.innerHTML="<important>";
+                da3.innerHTML="<strong>";
+                da4.innerHTML="<b>";
+                cauhoiht ++; 
+                if (a.checked) {
+                    diem++;
+                }
+                a.checked=b.checked=c.checked=d.checked=false;
+                break;
+        }
+        document.getElementById("ket_qua").innerHTML=diem;   
+       
+
+    }
+
+</script>
+</html>

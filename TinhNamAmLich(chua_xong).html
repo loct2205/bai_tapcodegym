@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Năm dương lịch:
+    <input type="text" id="nhap_vao" name="2020"/><br/>
+    <button onclick="tinh()">Tính</button><br/>
+    <span>Năm âm lịch là: </span><span id="ket_qua"></span>
+</body>
+<script>
+    function tinh() {
+        let nhap =Number(document.getElementById("nhap_vao").value);
+        let kq=document.getElementById("ket_qua");
+        let can=nhap%10 + "";
+        let chi=nhap%12 +"";
+        let namam="";
+        let namam2="";
+        let namam1="";
+        //Tính Can.
+        switch (can) {
+            case "0":
+                namam="Canh";
+                break;
+            case "1":
+                namam="Tân";
+                break;
+            case "2":
+                namam="Nhâm";
+                break;
+            case "3":
+                namam="Quý";
+                break;
+            case "4":
+                namam="Giáp";
+                break;
+            case "5":
+                namam="Ất";
+                break;
+            case "6":
+                namam="Bính";
+                break;
+            case "7":
+                namam="Đinh";
+                break;
+            case "8":
+                namam="Mậu";
+                break;
+            case "9":
+                namam="Kỷ";
+                break;
+        }
+        //Tính Chi.
+        switch (chi) {
+            case "0":
+                namam2="Thân";
+                break;
+            case "1":
+                namam2="Dậu";
+                break;
+            case "2":
+                namam2="Tuất";
+                break;
+            case "3":
+                namam2="Hợi";
+                break;
+            case "4":
+                namam2="Tý";
+                break;
+            case "5":
+                namam2="Sửu";
+                break;
+            case "6":
+                namam2="Dần";
+                break;
+            case "7":
+                namam2="Mão";
+                break;
+            case "8":
+                namam2="Thìn";
+                break;
+            case "9":
+                namam2="Tỵ";
+                break;
+            case "10":
+                namam2="Ngọ";
+                break;
+            case "11":
+                namam2="Mùi";
+                break;
+        }
+        console.log(can);
+        kq.innerHTML=namam +" "+ namam2;
+        
+    }
+</script>
+</html>
