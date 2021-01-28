@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <button onclick="next()">NEXT</button>
+        <span>KET QUA</span><br/><span id="kq"></span>
+        <script>
+            let mang= [
+                "chị ong nâu nâu bay đi đâu?", "chú bán ếch ở lại làm chi?", "đố em biết anh đang nghĩ gì?", "ai đã đặt tên cho dòng sông?"
+            ]
+            let i=0;
+            function next() {
+                
+                if (i>(mang.length-1)) {
+                    document.writeln("hết");
+                } else {
+                    document.getElementById("kq").innerHTML=mang[i];
+                    i++;
+                }
+            }
+        </script>
+    </body>
+</html>
