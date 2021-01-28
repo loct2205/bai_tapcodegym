@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        <form>
+            Số tiền : <input id="sotien" type="text"/> <br/>
+            Lai suất : <input id="laisuat" type="text"/> <br/>
+            Số năm : <input id="sonam" type="text"/> <br/>
+            <button type="button" onclick="tinh_toan()"> Tính  </button>
+
+        </form>
+        Số tiền phải trả là :<span id="sotienphaitra" ></span>
+    </body>
+    <script>
+        function tinh_toan() {
+            //let so_tien =Number(prompt=("Nhập vào số tiền :"));
+            //let lai_suat =Number(prompt=("Nhập vào lãi suất :"));
+            //let so_nam = Number(prompt=("Nhập vào số năm"));
+            let so_tien =Number(document.getElementById("sotien").value);
+            let lai_suat =Number(document.getElementById("laisuat").value);
+            let so_nam = Number(document.getElementById("sonam").value);
+            let lai_mot_nam= so_tien*(lai_suat/100);
+            let lai_phai_tra= lai_mot_nam*so_nam; 
+            let so_tien_phai_tra = so_tien + lai_phai_tra;
+            //document.write(so_tien_phai_tra);
+            document.getElementById("sotienphaitra").innerHTML= so_tien_phai_tra;
+        }
+        
+    </script>
+</html>

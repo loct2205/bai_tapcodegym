@@ -1,0 +1,20 @@
+<html>
+
+    <head></head>
+    <body>
+        <a id="mylink" href="https://learn.codegym.vn/" style="color: antiquewhite;"> Trang Chủ Học Nền tảng lập trình</a>
+        <br>
+        <button onclick="demo()">Thay đổi link</button>
+    </body>
+    <script>
+        function demo() {
+
+            console.log("Đã click");
+            
+            let link=document.getElementById("mylink");
+
+            link.innerHTML = "Learn CodyGym";
+            link.href = "https://learn.codegym.vn/courses/nen-tang-lap-trinh/lessons/nhap-xuat-du-lieu"
+        }
+    </script>
+</html>

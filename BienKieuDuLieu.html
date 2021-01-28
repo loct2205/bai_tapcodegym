@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <button><a href="BienKieuDuLieu2.html">BÀI 2</a></button>
+        BÀI1: Viết chương trình nhập điểm của một sinh viên cho các<br/>
+        môn: Vật lý, Hóa học, Sinh học. Sau đó hiển thị điểm trung<br>
+        bình  và tổng của những điểm này.<br/>
+        Vật lý<input type="text" id="vl"/><br/>
+        Hóa học<input type="text" id="hh"/><br/>
+        Sinh học<input type="text" id="sh"/><br/>
+        <button onclick="tb1()">Tính trung bình</button>
+        <button onclick="tg()">Tính tổng</button><br/>
+        <span>Điểm trung bình là: </span><span id="ket_qua"></span><br>
+        <span>Tổng điểm: </span><span id="ket_qua1"></span>
+    </body>
+    <script>
+        
+        function tb1() {
+            let vl=Number(document.getElementById("vl").value);
+            let hh=Number(document.getElementById("hh").value);
+            let sh=Number(document.getElementById("sh").value);
+            let kq=document.getElementById("ket_qua");
+            let tb=(vl+hh+sh)/3;
+            kq.innerHTML=tb;
+
+        }
+        function tg() {
+            let vl=Number(document.getElementById("vl").value);
+            let hh=Number(document.getElementById("hh").value);
+            let sh=Number(document.getElementById("sh").value);
+            let kq1= document.getElementById("ket_qua1");
+            let tong= (vl+hh+sh);
+            kq1.innerHTML=tong;
+        }
+    </script>
+</html>

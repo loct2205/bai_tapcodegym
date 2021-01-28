@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        SỐ THỨ NHẤT: <input type="text" id="nguyen1">
+        SỐ THỨ HAI: <input type="text" id="nguyen2">
+        <button onclick="tinh()">TÍNH TỔNG</button>
+        <span>KẾT QUẢ: </span><span id="kq"></span>
+    </body>
+    <script>
+        function tinh() {
+            let so1=Number(document.getElementById("nguyen1").value);
+            let so2=Number(document.getElementById("nguyen2").value);
+            let tong= so1+so2;
+            document.getElementById("kq").innerHTML=tong;
+        }
+    </script>
+</html>

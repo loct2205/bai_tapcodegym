@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <span>KET QUA: </span><br/>
+        <span id="kq1"></span>
+        <br>
+        <span id="kq2"></span>
+    </body>
+    <script>
+        let bk=Number(prompt("NHẬP BÁN KÍNH: "));
+        document.getElementById("kq1").innerHTML="CHU VI HÌNH TRÒN LÀ: "+ 2*bk*3.14;
+        document.getElementById("kq2").innerHTML="DIỆN TÍCH HÌNH TRÒN LÀ: "+ bk*bk*3.14;
+    </script>
+</html>

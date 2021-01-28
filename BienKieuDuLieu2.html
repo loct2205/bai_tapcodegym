@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <button><a href="BienKieuDuLieu.html">BÀI 1</a></button>
+        BÀI 2: Viết một chương trình nhập giá trị là độ C (Celsius) và<br>
+        chuyển nó sang độ F(Fahrenheit).[C/5=(F-32)/9]<br>
+        Độ c:<input id="c"><br/>
+        <button onclick="chuyen()">CHYỂN ĐỔI</button><br/>
+        <span>Độ F là: </span><span id="kq"></span>
+    </body>
+    <script>
+        function chuyen() {
+            let doc =Number(document.getElementById("c").value);
+            let ketqua=document.getElementById("kq");
+            let chuyendo=((9*(doc/5))+32);
+            ketqua.innerHTML=chuyendo;
+        }
+    </script>
+</html>
