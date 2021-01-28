@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.<br/>
+        <button><a href="bai5.html">BÀI 5</a></button><br/>
+        <script>
+            let f1=1;
+            let dem=2;
+            let f2=1;
+            let f3=1;
+            while (f3 % 5 !==0 ) {
+                f3=f1+f2;
+                f1=f2;
+                f2=f3;
+                dem++;
+                if (f3%5==0) {document.write("Số Fibonanci thứ ",dem," là số đầu trong dãy chia hết cho 5 <br/>Số có giá trị: ",f3)}
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <script>
+            let f1=f2=1;
+            let f3=0;
+            let dem=2;
+            let so_nhap=Number(prompt("Nhap so so nguyen bat ki: "));
+            if (so_nhap===1 || so_nhap>1) {document.write("So fibonacci thứ 1 có giá trị là: 1<br/>");}
+            if (so_nhap===2 || so_nhap>2) {document.write("So fibonacci thứ 2 có giá trị là: 1<br/>");}
+            if (so_nhap!=1 && so_nhap!=2) {
+                while (dem<so_nhap) {
+                        f3=f2+f1;
+                        f1=f2;
+                        f2=f3;100
+                        dem++;
+                        document.write("So fibonacci thứ ",dem," có giá trị là: ",f3,"<br/>");    
+                } 
+            }       
+        </script>
+    </body>
+</html>

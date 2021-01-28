@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100.<br/> 
+        Nhưng nếu số chia hết cho 3 thì in ra “Fizz”, 5 thì in ra “Buzz” thay vì in ra số đó. <br/>
+        Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ “FizzBuzz”.<br/>
+        <button><a href="bai1.html">BÀI 1</a></button><br/>
+        <script>
+            let dem=1;
+            while (dem<=100) {
+                if (dem%3==0 && dem%5==0) {
+                    document.write(dem," FizzBuzz <br/>")
+                } 
+                else if (dem%3==0) {
+                    document.write(dem," Fizz<br/>")
+                }
+                else if (dem%5==0){
+                    document.write(dem," Bizz<br/>")
+                } else document.write(dem,"<br/>");
+                dem++;
+            }
+        </script>    
+    </body>
+</html>

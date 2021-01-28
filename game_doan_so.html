@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+    </head>
+    <body>
+        <button onclick="choi()">CHƠI CHƠI</button><br/>
+        <script>
+            function choi() 
+            {
+                let khoang=prompt("Muốn đoán trong khoảng từ 0 đến bao nhiêu?");
+                let du=khoang%10;
+                let demm=1;
+                let dem1=0;
+                //
+                while (khoang>=10) 
+                {
+                    khoang=khoang/10;
+                    dem1++;
+                }
+                demm=dem1;
+                ////////
+                let may1=Math.random()*10*demm;
+                let may2=Math.round(may1+du);
+                let doan;
+                let choilai;
+                let dem=0;
+                //
+                do 
+                {
+                    doan=Number(prompt("Đoán xem số bao nhiêu? "));
+                    if (doan===may2) 
+                    {
+                        alert("CHÚC MỪNG! BẠN ĐÃ ĐÚNG");
+                    } else 
+                    {
+                        alert("CHÚC BẠN MAY MẮN LẦN SAU");
+                        choilai=prompt("Bank co muốn chơi lại nữa hay không?<br/>Nếu có bấm Enter <br/>Nếu không soạn Exit");
+                        if (choilai="Exit") {break;}
+                    }
+                    dem++
+                }
+                while (dem<=3)
+            }
+        </script>
+    </body>
+</html>

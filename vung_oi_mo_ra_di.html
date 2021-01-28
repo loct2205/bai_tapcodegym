@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <script>
+            let password;
+            let dem=0;
+            do {
+                    password=prompt("Nhập thần chú để mở cửa: ");
+                    if (password=="Không biết viết hoa chữ cái đầu tiên")
+                    {
+                        document.write("MỜI VÀO!");
+                        break;
+                    } else 
+                    {
+                        alert("Bấm Enter để nhập lại thần chú nhá!")
+                    }
+                    dem++;
+            } while (dem>0)
+
+        </script>
+    </body>
+</html>

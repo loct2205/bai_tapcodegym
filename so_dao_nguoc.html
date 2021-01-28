@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+        Nhập vào 1 sô
+        <input type="text" id="so">
+        <button onclick="dao_nguoc()">Đảo ngược</button>
+        <span id="kq"></span>
+        <script>
+            function dao_nguoc() {
+                let dem=-1;
+                let number=Number(document.getElementById("so").value);
+                let so_dao_nguoc=0;;
+                let temp=0;;
+                while ((number/10)!=0) {
+                    temp=number%10;
+                    dem++;
+                    so_dao_nguoc=temp+so_dao_nguoc*10;
+                    number=number/10;
+                    number=Math.round(number);
+                }
+                document.getElementById("kq").innerHTML="so dao nguoc là"+so_dao_nguoc;
+            }
+ 
+        </script>
+    </body>
+</html>
