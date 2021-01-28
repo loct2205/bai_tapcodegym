@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <input type="number" id="solieu1"/>
+        <input type="number"  id="solieu2"/>
+        <br/> 
+        <button onclick="cong()"> Addition(+)</button>
+        <button onclick="tru()">Subtraction(-)</button>
+        <button onclick="nhan()">Multiplication(X)</button>
+        <button onclick="chia()">Division(/)</button>
+        <span>Result Division: </span><span id="kq"></span>
+    </body>
+    <script>
+        
+        function cong() {
+            let so1=Number(document.getElementById("solieu1").value);
+            let so2=Number(document.getElementById("solieu2").value);
+            let cong12=so1+so2;
+            document.getElementById("kq").innerHTML=cong12;
+        }
+        function tru() {
+            let so1=Number(document.getElementById("solieu1").value);
+            let so2=Number(document.getElementById("solieu2").value);
+            let tru12=so1-so2;
+            document.getElementById("kq").innerHTML=tru12;
+        }
+        function nhan() {
+            let so1=Number(document.getElementById("solieu1").value);
+            let so2=Number(document.getElementById("solieu2").value);
+            let nhan12= so1*so2;
+            document.getElementById("kq").innerHTML=nhan12;
+        }
+        function chia() {
+            let so1=Number(document.getElementById("solieu1").value);
+            let so2=Number(document.getElementById("solieu2").value);
+            let chia12= so1/so2;
+            document.getElementById("kq").innerHTML=chia12;
+        }
+    </script>
+</html>

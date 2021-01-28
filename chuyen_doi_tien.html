@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <form action="so_tien">
+            Ammount<br/><input type="number" id="tien">
+        </form>
+        <form action="nuoc1">
+            From Currency<br/>
+            <select>
+                <option id="vnd">Việt nam</option>
+                <option>NaNa</option>
+                <option>NaNaNa</option>
+            </select>
+        </form>
+        <form action="nuoc">
+            To Currency<br/>
+            <select >
+                <option id="dola">USA</option>
+                <option>NaNa</option>
+                <option>NaNaNa</option>
+            </select>
+        </form>
+        <button onclick="convert()">Convert</button>
+        <span>Result</span><span id="kq"></span>
+    </body>
+    <script>
+        function convert() {
+            let tien=Number(document.getElementById("tien").value);
+            document.getElementById("kq").innerHTML=tien*23000;
+            
+        }
+    </script>
+</html>
