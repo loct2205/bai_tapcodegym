@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <form>
+            Tiếng anh <input id="ta"/><br/>
+            <button type="button" onclick="dich()">DỊCH</button><br/>
+            <span>Tiếng việt: </span> <span id="kq"></span>
+        </form>
+        <script>
+            function dich() {
+                //let dem=0; 
+                let dem= false
+                let nhap_tieng_anh=(document.getElementById("ta").value);
+                let tieng_anh=["hello", "hi", "goodbye", "morning", "afternoon", "everning"];
+                let tieng_viet=["xin chào", "xin chào", "tạm biệt", "buổi sáng", "buổi chiều", "buổi tối"];
+                for (let  i=0; i<=tieng_anh.length; i++)
+                {
+                    if (tieng_anh[i]===nhap_tieng_anh) {
+                        document.getElementById("kq").innerHTML=tieng_viet[i];
+                        console.log(i);
+                        dem=true;
+                        break;
+                    } 
+                    //dem++;
+                }
+                //if (dem>tieng_anh.length) {
+                if (dem=false) {
+                    document.getElementById("kq").innerHTML="Không tìm thấy";
+                }
+            }
+        </script>
+    </body>
+</html>
