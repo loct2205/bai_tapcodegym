@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        Đổi mét sang feet:
+        <form >
+            <input type="number"  id="inp" 
+            oninput="footToMeter(this.value)"
+            onchange="footToMeter(this.value)">
+        </form>
+        <span>Kết quả: </span> <span id="kq"></span>
+        Đổi feet sang mét:
+        <form >
+            <input type="number" id="inp2"
+            oninput="meterToFoot(this.value)"
+            onchange="meterToFoot(this.value)">
+        </form>
+        <span>Kết quả:</span> <span id="kq2"></span>
+    <script>
+        function footToMeter(foot) {
+            foot =parseFloat(foot);
+            document.getElementById("kq").innerHTML=foot*3.279;
+        }
+        function meterToFoot(meter) {
+            meter= parseFloat(meter);
+            document.getElementById("kq2").innerHTML=meter*0.305;
+        }
+    </script>
+    </body>
+</html>
