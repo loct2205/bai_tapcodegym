@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Temperature= function(number) {
+            this.number=number;
+            this.getChangeF= function() {
+                return (number*1.8) + 32;
+            }
+            this.getChangeK= function() {
+                return number+273.15;
+            }
+        }
+        let temperature= new Temperature(25);
+        let changeF= temperature.getChangeF();
+        let changeK= temperature.getChangeK();
+        alert("Nhiệt độ F là: "+changeF+"; Nhiệt độ K là: "+changeK);
+    </script>
+</body>
+</html>

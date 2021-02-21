@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="screen" width="400" height="200" style="border: 1px #000000 solid;"></canvas>
+    <script>
+        let Recrangle = function (length, width) {
+            this.length=length;
+            this.width= width;
+            this.getArea= function () {
+                return length*width;
+            }
+            this.getPerimeter= function () {
+                return 2*(length+width);
+            }
+        }
+        let recrangle= new Recrangle(80,200);
+        let area=recrangle.getArea();
+        let per=recrangle.getPerimeter();
+        let Width=recrangle.width;
+        let Length=recrangle.length;
+        alert("Diện tích của HCN là: "+area+"; Chu vi của HCN là: "+per);
+        function drawCircle() {
+            let myCanvas= document.getElementById("screen");
+            let context= myCanvas.getContext("2d");
+            context.clearRect(0,0,400,200);
+            context.beginPath();
+            //context.arc(95,50,40,0, area);
+            context.strokeRect(95,50,Width,Length);
+            context.fillStyle="blue";
+            context.fill();
+            context.stroke();
+        }
+        drawCircle();
+    </script>
+</body>
+</html>
