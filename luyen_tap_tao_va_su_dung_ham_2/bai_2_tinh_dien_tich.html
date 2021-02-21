@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+            function dien_tich_htron(a) {
+                let phep_tinh= a*a*3.14;
+                return(phep_tinh);
+            }
+            function chu_vi_htron(b) {
+                let phep_tinh2=2*3.14*b;
+                return(phep_tinh2);
+            }
+            let c=Number(prompt("Nhap vao ban kinh"));
+            document.writeln("dien tich hinh tron la: ",dien_tich_htron(c));
+            document.writeln("chu vi hinh tron la: ", chu_vi_htron(c));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[];
+        for (let i=0; i<10;i++) {
+            arr[i]=prompt("Nhập số thứ ",i+1);
+        }
+        document.writeln("Dãy đã cho: ")
+        for (let i=0; i<10;i++){
+            document.writeln(arr[i]); 
+        }
+        function dao_mang(a=[]){
+            let b=[];
+            for (let i=0; i<a.length;i++) {
+                b[a.length-i-1]=a[i];
+            }
+            return(b);
+        }
+        arr1=dao_mang(arr);
+        document.writeln("Mảng đã đảo là: ");
+        for (let i=0; i<arr1.length; i++) {
+            document.writeln(arr1[i]);
+        }
+    </script>
+</body>
+</html>

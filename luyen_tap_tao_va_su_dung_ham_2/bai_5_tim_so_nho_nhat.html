@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+            function so_be_nhat(a,b,c) {
+                let min=a;
+                if (b<min) {min=b};
+                if (c<min) {min=c};
+                return(min);
+            }
+            let d= Number(prompt("nhap vao ba so bat ki: "));
+            let e= Number(prompt("nhap vao ba so bat ki: "));
+            let f= Number(prompt("nhap vao ba so bat ki: "));
+            document.writeln("so nho nhat la: ",so_be_nhat(d,e,f));
+        </script>
+    </body>
+</html>

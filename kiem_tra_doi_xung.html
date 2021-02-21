@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let palindrome1=prompt("Nhập vào chuỗi đối xứng: ");
+        function kiem_tra(palindrome){
+            let check=true
+           for (let i=0; i<= palindrome.length/2; i++) {
+               if (palindrome[i]!== palindrome[palindrome.length-i-1]) {
+                   check=false;
+                   break;
+               } 
+           }
+           return(check);
+        }
+        document.writeln(kiem_tra(palindrome1));
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+            function giai_thua(a) {
+                let tinh=1;
+                for (let i=1; i<=a; i++) {
+                    tinh=i*tinh;
+                }
+                return(tinh);
+            }
+            let c=Number(prompt("Nhap vao so muon tinh giai thua"));
+            document.writeln("Giai thua cua so ",c," la: ",giai_thua(c));
+        </script>
+    </body>
+</html>

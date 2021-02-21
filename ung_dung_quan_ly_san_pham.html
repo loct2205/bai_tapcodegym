@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add New Product</h1>
+    <form>
+        <input type="text" name="new_product" id="new_product" style="background-attachment: fixed; background-color:rgb(226, 221, 221);">
+        <button type="button" onclick="btn_add_product()" style="background-color: rgb(28, 235, 28);">Add</button>
+    </form>
+    <h1>Display All Product</h1>
+    <table id="product_table"></table>
+</body>
+    <script>
+        let product_list=["Sony Xperia", "Samsung Galaxy", "Nokia 6",
+         "Xiaomi Redmi Note 4", "Apple iPhone 8 Plus", "Fujitsu F-04E", "Oppo A71" ];
+        function creat_table() {
+            let header= 
+            `<tr>
+                <td><h4>Product Name</h4></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><h4 id="produce" style="color: rgb(189, 45, 45);"></h4></td>
+            </tr>`;
+            let table_list= header;
+            
+            for (let i=0; i<product_list.length;i++) {
+                let product_row= 
+                `<tr>
+                    <td>`+product_list[i]+`</td>
+                    <td></td>
+                    <td>
+                        <button onclick="Edit_product(`+i+`)" style="background-color: rgb(28, 235, 28);">Edit</button>
+                    </td>
+                    <td></td>
+                    <td>
+                        <button onclick="Delete_product(`+i+`)" style="background-color: rgb(28, 235, 28);">Delete</button>
+                    </td>
+            
+                </tr>`;
+                table_list+=product_row;
+            }
+            document.getElementById("product_table").innerHTML= table_list;
+            document.getElementById("produce").innerHTML=product_list.length+ " products";
+        }
+        creat_table();
+        function add_product(product) {
+            product_list.push(product);
+
+        }
+        function btn_add_product() {
+            let product_name = document.getElementById("new_product").value;
+            add_product(product_name);
+            creat_table();
+        }
+        function Delete_product(product1) {
+            let option = confirm("Are you sure?");
+            if (!option) {
+                return;
+            }
+            product_list.splice(product1,1);
+            creat_table();
+        } 
+        function Edit_product(number_product) {
+            let product3=prompt("Nhập tên sản phẩm bạn muốn thêm vào: ");
+            product_list[number_product] = product3;
+            creat_table();
+        }
+        creat_table();
+
+        
+        
+    </script>
+</html>
